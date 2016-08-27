@@ -1,0 +1,52 @@
+/* Empty. Add your own CSS if you like */
+.tab-nav, .bar-footer, .bar-header, .help-content{
+  background-color: #EC1D27 ! important;
+}
+
+.title, .help-content{
+  color: #fff ! important;
+}
+
+.help-logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+
+.tabs .tab-item .icon{
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 100%;
+  background-size: contain;
+}
+
+.icon.jeremy{
+  background-image: url('../img/emoji/jeremy/smile.png');
+}
+
+.icon.red_jeremy{
+  background-image: url('../img/emoji/red-jeremy/eyebrow.png');
+}
+
+.icon.sticker{
+  background-image: url('../img/emoji/stickers/orgreave_a.png');
+}
+
+.emoji{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.emoji-container{
+  padding: 0;
+  margin: 0;
+width: 100%;
+height: 100%;
+background-size: 100% 100%;
+-webkit-filter: drop-shadow(-4px 4px 2px rgba(0,0,0,0.25));
+-moz-filter: drop-shadow(-4px 4px 2px rgba(0,0,0,0.25));
+-ms-filter: drop-shadow(-4px 4px 2px rgba(0,0,0,0.25));
+-o-filter: drop-shadow(-4px 4px 2px rgba(0,0,0,0.25));
+}
