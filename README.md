@@ -32,3 +32,13 @@ You'll probably spend most of your time testing in-browser. In order to ease dev
 use the Ionic Serve command to keep an instance running and reloading as you work.
 
     ionic serve
+
+## Deployment
+You will need access to the keystore and passwords in order to build this app for deployment.
+If you believe you should have access, contact the co-ordinator of your C4C group.
+
+Place the keystore in the root directory, and the release-signing.properties in platforms/android/, then run the following command:
+
+    ionic build android --release
+
+This should generate a signed .apk which you can use for deployment.
