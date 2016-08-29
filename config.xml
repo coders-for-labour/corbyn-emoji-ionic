@@ -2,10 +2,10 @@
 <widget id="com.jc.pm.jeremoji" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Jeremoji</name>
     <description>
-        Share your favourite Jeremy Corbyn images with your friends!
+        Share your favourite Jeremy Corbyn stickers with your friends!
     </description>
-    <author email="support@codersforcorbyn.com" href="http://codersforcorbyn.labour.pm/">
-      Support Name Here
+    <author email="tom@codersforcorbyn.com" href="http://www.codersforcorbyn.com/">
+      Coders for Corbyn
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -49,4 +49,5 @@
     </platform>
     <icon src="resources\android\icon\drawable-xhdpi-icon.png" />
     <plugin name="cordova-plugin-inappbrowser" spec="~1.4.0" />
+    <plugin name="cordova-plugin-google-analytics" spec="https://github.com/danwilson/google-analytics-plugin.git" />
 </widget>
