@@ -55,6 +55,10 @@ angular.module('corbynemoji.services', [])
     }, {
       category: 'stickers',
       name: 'miners_victory'
+    },
+    {
+      category: 'stickers',
+      name: 'coal_not_dole'
     }, {
       category: 'stickers',
       name: 'keep_left'
