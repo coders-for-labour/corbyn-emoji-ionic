@@ -1,6 +1,13 @@
-angular.module('starter.controllers', ['ionic.native'])
+angular.module('corbynemoji.controllers', ['ionic.native'])
 
-.controller('EmojiCtrl', function($scope, $stateParams, Emoji, $cordovaSocialSharing, $cordovaFile, $ionicModal) {
+.controller('EmojiCtrl', function($scope, $stateParams, Emoji, $cordovaSocialSharing, $cordovaFile, $ionicModal, $cordovaGoogleAnalytics, $ionicPlatform) {
+
+  $ionicPlatform.ready(function(){
+    $cordovaGoogleAnalytics.trackView('Emoji Category: ' + $stateParams.category);
+  });
+
+
+
   $ionicModal.fromTemplateUrl('templates/help-modal.html', {
     scope: $scope,
     animation: 'slide-in-up'
@@ -16,6 +23,7 @@ angular.module('starter.controllers', ['ionic.native'])
     };
 
     $cordovaSocialSharing.shareWithOptions(options, function(){
+      $cordovaGoogleAnalytics.trackEvent("Emoji", "Shared Image", e.category + "_" + e.name, 1);
     });
   }
 
