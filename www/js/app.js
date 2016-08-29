@@ -5,10 +5,12 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('corbynemoji', ['ionic', 'corbynemoji.controllers', 'corbynemoji.services'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $cordovaGoogleAnalytics) {
   $ionicPlatform.ready(function() {
+    $cordovaGoogleAnalytics.startTrackerWithId('UA-83321918-1');
+
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {

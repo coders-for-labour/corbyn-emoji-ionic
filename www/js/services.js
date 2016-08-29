@@ -1,4 +1,4 @@
-angular.module('starter.services', [])
+angular.module('corbynemoji.services', [])
 .factory('Emoji', function(){
   var emoji = [
   {
