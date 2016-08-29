@@ -9,23 +9,23 @@
   <ion-content class="padding">
     <div class="row emoji-row" ng-repeat="e in emoji" ng-if="$index % 4 == 0">
       <div class="col col-25" ng-if="$index < emoji.length" on-tap="share(emoji[$index])">
-        <div class="emoji-container" style="background-image: url('{{ getPath(emoji[$index]) }}');">
-          <img class="emoji" ng-src="{{getPath(emoji[$index])}}" style="mask: url('{{getPath(emoji[$index])}}'); -webkit-mask-box-image: url('{{getPath(emoji[$index])}}');"/>
+        <div class="emoji-container">
+          <img class="emoji" ng-src="{{getPath(emoji[$index])}}"/>
         </div>
       </div>
       <div class="col col-25" ng-if="$index + 1 < emoji.length" on-tap="share(emoji[$index + 1])">
-        <div class="emoji-container" style="background-image: url('{{ getPath(emoji[$index + 1]) }}');">
-          <img class="emoji" ng-src="{{getPath(emoji[$index + 1])}}" style="mask: url('{{getPath(emoji[$index + 1])}}'); -webkit-mask-box-image: url('{{getPath(emoji[$index + 1])}}');"/>
+        <div class="emoji-container">
+          <img class="emoji" ng-src="{{getPath(emoji[$index + 1])}}"/>
         </div>
       </div>
       <div class="col col-25" ng-if="$index + 2 < emoji.length" on-tap="share(emoji[$index + 2])">
-        <div class="emoji-container" style="background-image: url('{{ getPath(emoji[$index + 2]) }}');">
-          <img class="emoji" ng-src="{{getPath(emoji[$index + 2])}}" style="mask: url('{{getPath(emoji[$index + 2])}}'); -webkit-mask-box-image: url('{{getPath(emoji[$index + 2])}}');"/>
+        <div class="emoji-container">
+          <img class="emoji" ng-src="{{getPath(emoji[$index + 2])}}"/>
         </div>
       </div>
       <div class="col col-25" ng-if="$index + 3 < emoji.length" on-tap="share(emoji[$index + 3])">
-        <div class="emoji-container" style="background-image: url('{{ getPath(emoji[$index + 3]) }}');">
-          <img class="emoji" ng-src="{{getPath(emoji[$index + 3])}}" style="mask: url('{{getPath(emoji[$index + 3])}}'); -webkit-mask-box-image: url('{{getPath(emoji[$index + 3])}}');"/>
+        <div class="emoji-container">
+          <img class="emoji" ng-src="{{getPath(emoji[$index + 3])}}"/>
         </div>
       </div>
     </div>
