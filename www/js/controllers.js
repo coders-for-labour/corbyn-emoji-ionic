@@ -35,6 +35,7 @@ angular.module('corbynemoji.controllers', ['ionic.native'])
   $scope.emoji = Emoji.getCategory($stateParams.category);
   $scope.share = share;
   $scope.getPath = getPath;
+  $scope.platform = ionic.Platform.platform();
   $scope.help = function(){
     $scope.modal.show();
   };
