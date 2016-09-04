@@ -3,71 +3,91 @@ angular.module('corbynemoji.services', [])
   var emoji = [
   {
     category: 'jeremy',
-    name: 'smile'
+    name: 'smile',
+    defaultText: "#JeremyForLabour"
   },
   {
     category: 'jeremy',
-    name: 'smile_cap'
+    name: 'smile_cap',
+    defaultText: "#JeremyForLabour"
   },
   {
     category: 'jeremy',
-    name: 'look'
+    name: 'look',
+    defaultText: "#JeremyForLabour"
   },
   {
     category: 'jeremy',
-    name: 'look_cap'
+    name: 'look_cap',
+    defaultText: "#JeremyForLabour"
   },
   {
     category: 'jeremy',
-    name: 'sad'
+    name: 'sad',
+    defaultText: "#JeremyForLabour"
   },
   {
     category: 'jeremy',
-    name: 'thumbs'
+    name: 'thumbs',
+    defaultText: "#JeremyForLabour"
   },
     {
       category: 'red-jeremy',
-      name: 'eyebrow'
+      name: 'eyebrow',
+      defaultText: "#JeremyForLabour"
     }, {
       category: 'red-jeremy',
-      name: 'smile'
+      name: 'smile',
+      defaultText: "#JeremyForLabour"
     }, {
       category: 'red-jeremy',
-      name: 'look'
+      name: 'look',
+      defaultText: "#JeremyForLabour"
     }, {
       category: 'red-jeremy',
-      name: 'sad'
+      name: 'sad',
+      defaultText: "#JeremyForLabour"
     }, {
       category: 'stickers',
-      name: 'orgreave_a'
+      name: 'orgreave_a',
+      defaultText: "#JeremyForLabour"
     }, {
       category: 'stickers',
-      name: 'orgreave_b'
+      name: 'orgreave_b',
+      defaultText: "#JeremyForLabour"
     }, {
       category: 'stickers',
-      name: 'orgreave_c'
+      name: 'orgreave_c',
+      defaultText: "#JeremyForLabour"
     }, {
       category: 'stickers',
-      name: 'orgreave_d'
+      name: 'orgreave_d',
+      defaultText: "#JeremyForLabour"
     }, {
       category: 'stickers',
-      name: 'miners_solidarity'
+      name: 'miners_solidarity',
+      defaultText: "#JeremyForLabour"
     }, {
       category: 'stickers',
-      name: 'miners_victory'
+      name: 'miners_victory',
+      defaultText: "#JeremyForLabour"
     }, {
       category: 'stickers',
-      name: 'keep_left'
+      name: 'keep_left',
+      defaultText: "#JeremyForLabour"
     }, {
       category: 'stickers',
-      name: 'jez_we_can'
+      name: 'jez_we_can',
+      defaultText: "#JeremyForLabour"
     }, {
       category: 'stickers',
-      name: 'rather_fight_tories_a'
+      name: 'rather_fight_tories_a',
+      defaultText: "#JeremyForLabour"
     },
     {
       category: 'stickers',
-      name: 'rather_fight_tories_b'
+      name: 'rather_fight_tories_b',
+      defaultText: "#JeremyForLabour"
     }
   ];
 

@@ -16,11 +16,22 @@ angular.module('corbynemoji.controllers', ['ionic.native'])
     $scope.modal = modal;
   });
 
+  $ionicModal.fromTemplateUrl('templates/share-modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal){
+    $scope.shareModal = modal;
+  });
+
+  function copy(e){
+
+  }
 
   //Launch the share process for an emoji
-  function share(e){
+  function share(shareObj){
     var options = {
-      files: [imgPath + e.category + "/" + e.name + ".png"]
+      message: shareObj.text,
+      files: [imgPath + shareObj.emoji.category + "/" + shareObj.emoji.name + ".png"]
     };
 
     /**
@@ -37,7 +48,7 @@ angular.module('corbynemoji.controllers', ['ionic.native'])
         $cordovaGoogleAnalytics.trackEvent("Emoji", "Shared To", result.app, 1);
       }
 
-      $cordovaGoogleAnalytics.trackEvent("Emoji", "Shared Image", e.category + "_" + e.name, 1);
+      $cordovaGoogleAnalytics.trackEvent("Emoji", "Shared Image", shareObj.emoji.category + "_" + shareObj.emoji.name, 1);
     };
 
     /**
@@ -63,7 +74,17 @@ angular.module('corbynemoji.controllers', ['ionic.native'])
 
   $scope.category = $stateParams.category;
   $scope.emoji = Emoji.getCategory($stateParams.category);
+  $scope.startShare = function(e){
+      $scope.shareObj = {
+        emoji: e,
+        text: e.defaultText
+      };
+      $scope.shareModal.show();
+  };
   $scope.share = share;
+  $scope.closeShare = function(){
+      $scope.shareModal.hide();
+  };
   $scope.getPath = getPath;
   $scope.platform = ionic.Platform.platform();
   $scope.help = function(){
