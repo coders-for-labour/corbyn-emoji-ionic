@@ -61,7 +61,7 @@ angular.module('corbynemoji.services', [])
       category: 'stickers',
       name: 'orgreave_a',
       defaultText: "#JeremyForLabour",
-      description: ""
+      description: "In 2012, the Orgreave Truth and Justice Campaign (OTJC) was formed to campaign for a public enquiry into the policing of the Battle of Orgreave - a violent confrontation on 18 June 1984 between police and pickets at a British Steel Corporation (BSC) coking plant in Orgreave, South Yorkshire. Following the success of the Hillsborough Justice Campaign, there’s been increasing pressure for a full report into the way the event was handled and the violence and intimidation used against workers. SOME MORE TEXT TO FORCE SCROLLING!"
     }, {
       category: 'stickers',
       name: 'orgreave_b',

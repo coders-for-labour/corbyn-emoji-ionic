@@ -7,6 +7,15 @@
   color: #fff ! important;
 }
 
+.share-content{
+  background-color: #fff;
+}
+
+.share-button{
+  background-color: #EC1D27;
+  color: #fff;
+}
+
 .help-logo{
   display: block;
   margin-left: auto;
@@ -37,6 +46,11 @@
   display: block;
   width: 100%;
   height: 100%;
+}
+
+.emoji-sharing{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .emoji-container{

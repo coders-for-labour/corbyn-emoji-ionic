@@ -7,20 +7,24 @@
         <button class="button button-light button-clear icon ion-close-circled" ng-click="closeShare()"/>
       </div>
     </ion-header-bar>
-    <ion-content class="help-content padding">
-      <div class="list">
-        <div class="card item">
-          <div class="item">
-            <img class="emoji" ng-src="{{getPath(shareObj.emoji)}}"/>
-          </div>
-        </div>
-        <label class="item item-input">
-          <input type="text" ng-model="shareObj.text"/>
-        </label>
-      </div>
-      <div class="padding">
-        <button class="button button-block" ng-click="share(shareObj)">Share</button>
-      </div>
+    <ion-content class="share-content padding" scroll="false">
+            <ion-slides options="sliderOptions" slider="data.slider">
+              <ion-slide-page>
+                <img class="emoji emoji-sharing" ng-if="shareObj.emoji" ng-src="{{getPath(shareObj.emoji)}}"/>
+
+              <div class="padding">
+                <label class="item item-input">
+                  <input type="text" ng-model="shareObj.text"/>
+                </label>
+                <button class="button button-block share-button" ng-click="share(shareObj)">Share</button>
+              </div>
+              </ion-slide-page>
+              <ion-slide-page ng-if="shareObj.description !== ''">
+                {{shareObj.description}}
+              </ion-slide-page>
+            </ion-slides>
+
+
     </ion-content>
     <ion-footer-bar align-title="center">
       <ion-title>

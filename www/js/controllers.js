@@ -77,7 +77,8 @@ angular.module('corbynemoji.controllers', ['ionic.native'])
   $scope.startShare = function(e){
       $scope.shareObj = {
         emoji: e,
-        text: e.defaultText
+        text: e.defaultText,
+        description: e.description
       };
       $scope.shareModal.show();
   };
@@ -97,6 +98,15 @@ angular.module('corbynemoji.controllers', ['ionic.native'])
   };
   $scope.$on('$destroy', function(){
     $scope.modal.remove();
+  });
+
+  $scope.sliderOptions = {
+    autoHeight: true,
+    effect: 'flip'
+  };
+
+  $scope.$on("$ionicSlides.sliderInitialized", function(event, data){
+    $scope.slider = data.slider;
   });
 
   $scope.donateClicked = donateClicked;
