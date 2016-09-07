@@ -8,7 +8,13 @@
 }
 
 .share-content{
-  background-color: #fff;
+  text-align: justify;
+}
+
+.centered{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .share-button{
