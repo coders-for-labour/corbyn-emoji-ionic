@@ -1,5 +1,58 @@
 angular.module('corbynemoji.controllers', ['ionic.native'])
+.controller('Home', function($scope, $http, $ionicModal, $cordovaGoogleAnalytics, $ionicPlatform){
 
+  $ionicModal.fromTemplateUrl('templates/help-modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal){
+    $scope.modal = modal;
+  });
+
+  $scope.init = function(){
+    $http.get("http://jeremoji.codersforcorbyn.com/", { params: {json: 1, count: 10 }  })
+      .success(function(data){
+        $scope.feed = data;
+      })
+      .error(function(data){
+        $scope.feed = {
+          error: "Could not retrieve feed data.",
+          posts: [{
+            title_plain: "Post 1",
+            excerpt: "Test",
+            date: "1"
+          },{
+            title_plain: "Post 2",
+            excerpt: "Test",
+            date: "2"
+          },{
+            title_plain: "Post 3",
+            excerpt: "Test",
+            date: "3"
+          },]
+        };
+        console.log("ERROR: " + data);
+      });
+  };
+
+  //Launch the campaign donation site
+  function donateClicked(){
+    $cordovaGoogleAnalytics.trackEvent("Campaign", "Donate", "Begin", 1);
+    window.open('https://new-corbynstays.nationbuilder.com/donate', '_system');
+  }
+  $scope.donateClicked = donateClicked;
+  $scope.platform = ionic.Platform.platform();
+  $scope.help = function(){
+    $cordovaGoogleAnalytics.trackEvent("App", "Help", "View", 1);
+    $scope.modal.show();
+  };
+  $scope.closeHelp = function(){
+    $cordovaGoogleAnalytics.trackEvent("App", "Help", "Dismiss", 1);
+    $scope.modal.hide();
+  };
+  $scope.$on('$destroy', function(){
+    $scope.modal.remove();
+  });
+})
 .controller('EmojiCtrl', function($scope, $stateParams, Emoji, $cordovaSocialSharing, $cordovaFile, $ionicModal, $cordovaGoogleAnalytics, $ionicPlatform) {
   //Base image path
   var imgPath = "www/img/emoji/";
@@ -66,12 +119,6 @@ angular.module('corbynemoji.controllers', ['ionic.native'])
     return "img/emoji/" + e.category + "/" + e.name + ".png";
   }
 
-  //Launch the campaign donation site
-  function donateClicked(){
-    $cordovaGoogleAnalytics.trackEvent("Campaign", "Donate", "Begin", 1);
-    window.open('https://new-corbynstays.nationbuilder.com/donate', '_system');
-  }
-
   $scope.category = $stateParams.category;
   $scope.emoji = Emoji.getCategory($stateParams.category);
   $scope.startShare = function(e){
@@ -87,6 +134,14 @@ angular.module('corbynemoji.controllers', ['ionic.native'])
       $scope.shareModal.hide();
   };
   $scope.getPath = getPath;
+
+
+  //Launch the campaign donation site
+  function donateClicked(){
+    $cordovaGoogleAnalytics.trackEvent("Campaign", "Donate", "Begin", 1);
+    window.open('https://new-corbynstays.nationbuilder.com/donate', '_system');
+  }
+  $scope.donateClicked = donateClicked;
   $scope.platform = ionic.Platform.platform();
   $scope.help = function(){
     $cordovaGoogleAnalytics.trackEvent("App", "Help", "View", 1);
@@ -109,5 +164,4 @@ angular.module('corbynemoji.controllers', ['ionic.native'])
     $scope.slider = data.slider;
   });
 
-  $scope.donateClicked = donateClicked;
 });
