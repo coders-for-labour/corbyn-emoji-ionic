@@ -3,6 +3,14 @@
   background-color: #EC1D27 ! important;
 }
 
+.labour-red{
+  border-color: #EC1D27 ! important;
+}
+
+.labour-red i{
+  color: #EC1D27 ! important;
+}
+
 .title, .help-content{
   color: #fff ! important;
 }

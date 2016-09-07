@@ -10,7 +10,7 @@
     <button class="button button-light button-clear icon ion-help-circled" ng-click="help()"></button>
   </ion-nav-buttons>
   <ion-content ng-init="init()" class="padding">
-    <div ng-if="feed.error" class="list card">
+    <!-- <div ng-if="feed.error" class="list card">
       <div class="item item-divider">
         Woops!
       </div>
@@ -18,18 +18,24 @@
         <p><b>We couldn't grab the latest news :(</b></p>
         <p>Please make sure you have a network connection, and try again!</p>
       </div>
-    </div>
-    <div class="list card" ng-repeat="p in feed.posts">
-      <div class="item item-divider">
-        {{ p.title_plain }}
+    </div> -->
+    <section id="cd-timeline" class="cd-container">
+      <div ng-repeat="p in feed.posts">
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-icon labour-red" style="text-align: center;">
+            <i class="ion-radio-waves timelineIcon"></i>
+          </div>
+          <div class="cd-timeline-content labour-red">
+            <div class="item item-divider">
+              {{ p.title_plain }}
+            </div>
+            <div class="item item-text-wrap timelineText">
+              {{ p.excerpt }}
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="item item-text-wrap">
-        {{ p.excerpt }}
-      </div>
-      <div class="item item-divider">
-        {{ p.date }}
-      </div>
-    </div>
+    </section>
   </ion-content>
   <ion-footer-bar align-title="center" ng-if="platform == 'android'">
     <ion-title>
