@@ -101,7 +101,7 @@ angular.module('corbynemoji.controllers', ['ionic.native'])
   });
 
   $scope.sliderOptions = {
-    autoHeight: true,
+    height: 100,
     effect: 'flip'
   };
 

@@ -12,17 +12,18 @@
               <ion-slide-page>
                 <img class="emoji emoji-sharing" ng-if="shareObj.emoji" ng-src="{{getPath(shareObj.emoji)}}"/>
 
-              <div class="padding">
-                <label class="item item-input">
-                  <input type="text" ng-model="shareObj.text"/>
-                </label>
-                <button class="button button-block share-button" ng-click="share(shareObj)">Share</button>
-              </div>
+
               </ion-slide-page>
               <ion-slide-page ng-if="shareObj.description !== ''">
                 {{shareObj.description}}
               </ion-slide-page>
             </ion-slides>
+            <div class="padding">
+              <label class="item item-input">
+                <input type="text" ng-model="shareObj.text"/>
+              </label>
+              <button class="button button-block share-button" ng-click="share(shareObj)">Share</button>
+            </div>
 
 
     </ion-content>
