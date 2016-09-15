@@ -44,16 +44,20 @@
   background-size: contain;
 }
 
-.icon.jeremy{
-  background-image: url('../img/assets/tabs/face-transparent.png');
+.icon.smile-circle{
+  background-image: url('../img/assets/tabs/smile-circle.png');
 }
 
-.icon.red_jeremy{
-  background-image: url('../img/assets/tabs/red-menu.png');
+.icon.smile-square{
+  background-image: url('../img/assets/tabs/smile-square.png');
 }
 
 .icon.sticker{
-  background-image: url('../img/assets/tabs/sticker-menu.png');
+  background-image: url('../img/assets/tabs/sticker.png');
+}
+
+.tab-item-active{
+  color: inherit ! important;
 }
 
 .emoji{

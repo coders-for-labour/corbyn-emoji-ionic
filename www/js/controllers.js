@@ -8,7 +8,7 @@ angular.module('corbynemoji.controllers', ['ionic.native'])
     $scope.modal = modal;
   });
 
-  $scope.init = function(){
+  function getLatest(){
     $http.get("http://jeremoji.codersforcorbyn.com/", { params: {json: 1, count: 10 }  })
       .success(function(data){
         $scope.feed = data;
@@ -32,7 +32,11 @@ angular.module('corbynemoji.controllers', ['ionic.native'])
         };
         console.log("ERROR: " + data);
       });
-  };
+  }
+
+  $scope.init = getLatest;
+
+  $scope.refresh = getLatest;
 
   //Launch the campaign donation site
   function donateClicked(){
