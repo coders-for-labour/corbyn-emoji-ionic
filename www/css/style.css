@@ -1,18 +1,25 @@
 /* Empty. Add your own CSS if you like */
- .bar-footer, help-content{
+.bar-footer, help-content
+{
   background-color: #EC1D27 ! important;
 }
 
-.tab-nav {background-color: white! important;
-height: 40px ;
+.tab-nav
+{
+  background-color: white! important;
+  height: 40px ;
 }
 
-.bar-footer {background-color: #EC1D27! important;
-height: 65px}
+.bar-footer {
+  background-color: #EC1D27! important;
+  height: 65px
+}
 
 
-.bar-header{background-color: #EC1D27! important;
-height: 40px;}
+.bar-header{
+  background-color: #EC1D27! important;
+  height: 40px;
+}
 
 .labour-red{
   border-color: #EC1D27 ! important;

@@ -31,6 +31,9 @@ angular.module('corbynemoji.controllers', ['ionic.native'])
           },]
         };
         console.log("ERROR: " + data);
+      })
+      .finally(function(){
+        $scope.$broadcast("scroll.refreshComplete");
       });
   }
 
