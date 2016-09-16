@@ -41,6 +41,15 @@ angular.module('corbynemoji', ['ionic', 'corbynemoji.controllers', 'corbynemoji.
   })
 
   // Each tab has its own nav history stack:
+  .state('tab.home', {
+    url: '/rss',
+    views: {
+      'tab-rss': {
+        templateUrl: 'templates/tab-rss.html',
+        controller: 'Home'
+      }
+    }
+  })
 
   .state('tab.jeremy', {
     url: '/jeremy',

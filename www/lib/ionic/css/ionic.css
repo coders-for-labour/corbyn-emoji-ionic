@@ -4041,11 +4041,12 @@ a.subdued {
     .bar .button.button-clear, .bar button.button-clear {
       padding-right: 2px;
       padding-left: 2px;
+padding-top: 11px;
       font-weight: 300;
       font-size: 17px; }
       .bar .button.button-clear .icon:before, .bar .button.button-clear.icon:before, .bar .button.button-clear.icon-left:before, .bar .button.button-clear.icon-right:before, .bar button.button-clear .icon:before, .bar button.button-clear.icon:before, .bar button.button-clear.icon-left:before, .bar button.button-clear.icon-right:before {
-        font-size: 32px;
-        line-height: 32px; }
+        font-size: 20px;
+        line-height: 20px;}
     .bar .button.back-button, .bar button.back-button {
       display: block;
       margin-right: 5px;
@@ -4108,7 +4109,7 @@ a.subdued {
     background: none;
     box-shadow: none;
     color: #444;
-    font-size: 17px; }
+    font-size: 10px; }
   .bar-light .button.button-icon {
     border-color: transparent;
     background: none; }
@@ -4276,7 +4277,7 @@ a.subdued {
 .bar-header {
   top: 0;
   border-top-width: 0;
-  border-bottom-width: 1px; }
+  border-bottom-width: 0px; }
   .bar-header.has-tabs-top {
     border-bottom-width: 0px;
     background-image: none; }
@@ -4287,18 +4288,19 @@ a.subdued {
 
 .bar-footer {
   bottom: 0;
-  border-top-width: 1px;
+  border-top-width: 0px;
   border-bottom-width: 0;
   background-position: top;
   height: 44px; }
   .bar-footer.item-input-inset {
     position: absolute; }
   .bar-footer .title {
-    height: 43px;
-    line-height: 44px; }
+    height: 65px;
+    line-height: 44px;
+    top: -2px; }
 
 .bar-tabs {
-  padding: 0; }
+  padding: 0px; }
 
 .bar-subheader {
   top: 44px;
@@ -4316,7 +4318,7 @@ a.subdued {
 
 .nav-bar-block {
   position: absolute;
-  top: 0;
+  top: -15px;
   right: 0;
   left: 0;
   z-index: 9; }
@@ -5085,7 +5087,7 @@ ion-tabs.tabs-striped.tabs-color-active-dark .tab-item.tab-item-active, ion-tabs
 /* If you change this, change platform.scss as well */
 .tabs-top > .tabs,
 .tabs.tabs-top {
-  top: 44px;
+  top: 35px;
   padding-top: 0;
   background-position: bottom;
   border-top-width: 0;
@@ -5139,7 +5141,8 @@ ion-tabs.tabs-striped.tabs-color-active-dark .tab-item.tab-item-active, ion-tabs
   display: block;
   margin: 0 auto;
   height: 32px;
-  font-size: 32px; }
+  font-size: 32px; 
+margin-top: -4px;}
 
 .tabs-icon-left.tabs .tab-item,
 .tabs-icon-left > .tabs .tab-item,
