@@ -15,20 +15,7 @@ angular.module('corbynemoji.controllers', ['ionic.native'])
       })
       .error(function(data){
         $scope.feed = {
-          error: "Could not retrieve feed data.",
-          posts: [{
-            title_plain: "Post 1",
-            excerpt: "Test",
-            date: "1"
-          },{
-            title_plain: "Post 2",
-            excerpt: "Test",
-            date: "2"
-          },{
-            title_plain: "Post 3",
-            excerpt: "Test",
-            date: "3"
-          },]
+          error: "Could not retrieve feed data."
         };
         console.log("ERROR: " + data);
       })
@@ -37,9 +24,18 @@ angular.module('corbynemoji.controllers', ['ionic.native'])
       });
   }
 
+  $scope.clean = function(text){
+    return decodeURI(text);
+  };
+
   $scope.init = getLatest;
 
   $scope.refresh = getLatest;
+
+  function launchPage(post){
+    window.open(post.url, '_system');
+  }
+  $scope.go = launchPage;
 
   //Launch the campaign donation site
   function donateClicked(){

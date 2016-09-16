@@ -13,7 +13,7 @@
     <ion-refresher pulling-text="Pull to refresh..." on-refresh="refresh()">
     </ion-refresher>
 
-      <!-- <div ng-if="feed.error" class="list card">
+      <div ng-if="feed.error" class="list card">
         <div class="item item-divider">
           Woops!
         </div>
@@ -21,19 +21,16 @@
           <p><b>We couldn't grab the latest news :(</b></p>
           <p>Please make sure you have a network connection, and try again!</p>
         </div>
-      </div> -->
-      <div id="cd-timeline" class="cd-container">
+      </div>
+      <div ng-if="!feed.error" id="cd-timeline" class="cd-container">
         <div ng-repeat="p in feed.posts">
           <div class="cd-timeline-block">
             <div class="cd-timeline-icon labour-red" style="text-align: center;">
               <i class="ion-radio-waves timelineIcon"></i>
             </div>
             <div class="cd-timeline-content labour-red">
-              <div class="item item-divider">
-                {{ p.title_plain }}
-              </div>
-              <div class="item item-text-wrap timelineText">
-                {{ p.excerpt }}
+              <div class="item item-text-wrap" ng-click="go(p)">
+                <p ng-bind-html="p.title_plain"></p>
               </div>
             </div>
           </div>
