@@ -1,7 +1,18 @@
 /* Empty. Add your own CSS if you like */
-.tab-nav, .bar-footer, .bar-header, .help-content{
+ .bar-footer, help-content{
   background-color: #EC1D27 ! important;
 }
+
+.tab-nav {background-color: white! important;
+height: 40px ;
+}
+
+.bar-footer {background-color: #EC1D27! important;
+height: 65px}
+
+
+.bar-header{background-color: #EC1D27! important;
+height: 40px;}
 
 .labour-red{
   border-color: #EC1D27 ! important;
@@ -15,6 +26,7 @@
   color: #fff ! important;
 }
 
+
 .share-content{
   text-align: justify;
 }
@@ -26,8 +38,8 @@
 }
 
 .share-button{
-  background-color: #EC1D27;
-  color: #fff;
+  background-color: #FFF;
+  color: #FFF;
 }
 
 .help-logo{
@@ -39,9 +51,10 @@
 
 .tabs .tab-item .icon{
   background-repeat: no-repeat;
-  background-position: 50%;
+  background-position: 50% 7px !important;
   height: 100%;
-  background-size: contain;
+  background-size: 32px;
+  color: black;
 }
 
 .icon.smile-circle{
