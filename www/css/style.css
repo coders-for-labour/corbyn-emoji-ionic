@@ -1,10 +1,45 @@
 /* Empty. Add your own CSS if you like */
-.tab-nav, .bar-footer, .bar-header, .help-content{
+ .bar-footer, help-content{
   background-color: #EC1D27 ! important;
+}
+
+.tab-nav {background-color: white! important;
+height: 40px ;
+}
+
+.bar-footer {background-color: #EC1D27! important;
+height: 65px}
+
+
+.bar-header{background-color: #EC1D27! important;
+height: 40px;}
+
+.labour-red{
+  border-color: #EC1D27 ! important;
+}
+
+.labour-red i{
+  color: #EC1D27 ! important;
 }
 
 .title, .help-content{
   color: #fff ! important;
+}
+
+
+.share-content{
+  text-align: justify;
+}
+
+.centered{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.share-button{
+  background-color: #FFF;
+  color: #FFF;
 }
 
 .help-logo{
@@ -16,27 +51,37 @@
 
 .tabs .tab-item .icon{
   background-repeat: no-repeat;
-  background-position: 50%;
+  background-position: 50% 7px !important;
   height: 100%;
-  background-size: contain;
+  background-size: 32px;
+  color: black;
 }
 
-.icon.jeremy{
-  background-image: url('../img/assets/tabs/face-transparent.png');
+.icon.smile-circle{
+  background-image: url('../img/assets/tabs/smile-circle.png');
 }
 
-.icon.red_jeremy{
-  background-image: url('../img/assets/tabs/red-menu.png');
+.icon.smile-square{
+  background-image: url('../img/assets/tabs/smile-square.png');
 }
 
 .icon.sticker{
-  background-image: url('../img/assets/tabs/sticker-menu.png');
+  background-image: url('../img/assets/tabs/sticker.png');
+}
+
+.tab-item-active{
+  color: inherit ! important;
 }
 
 .emoji{
   display: block;
   width: 100%;
   height: 100%;
+}
+
+.emoji-sharing{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .emoji-container{
